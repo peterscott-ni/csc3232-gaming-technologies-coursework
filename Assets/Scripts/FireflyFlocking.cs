@@ -20,8 +20,8 @@ public class FireflyFlocking : MonoBehaviour
     void Update()
     {
         MoveTowardTarget();
-/*        SeparateFireflies();
-*/    }
+        SeparateFireflies();
+    }
 
     private void MoveTowardTarget()
     {
@@ -35,14 +35,20 @@ public class FireflyFlocking : MonoBehaviour
         foreach(GameObject firefly in fireflyArray)
         {
             if(firefly != gameObject) // avoids performing calculation for self
-            {
-                /*float distance = Vector3.Distance(firefly.transform.position, transform.position);
-                if(distance <= 0.1f)
+            { 
+                float currentNeighbourDistanceSqr = Vector3.SqrMagnitude(firefly.transform.position - transform.position);
+                if(currentNeighbourDistanceSqr <= (0.1f * 0.1f))
                 {
-                    Vector3 direction = transform.position - firefly.transform.position;
-                    transform.Translate(direction * Time.deltaTime);
-                }   */
-                totalVector += (firefly.transform.position - transform.position);
+                    
+                }
+                /*float distance = Vector3.Distance(firefly.transform.position, transform.position);
+                 if(distance <= 0.1f)
+                 {
+                     Vector3 direction = transform.position - firefly.transform.position;
+                     transform.Translate(direction * Time.deltaTime);
+                 }   */
+                /*                totalVector += (firefly.transform.position - transform.position);
+*/
             }
         }
         Vector3 averageVector = totalVector / (fireflyArray.Length - 1);
