@@ -65,8 +65,6 @@ public class ThirdPersonMovement : MonoBehaviour
         if (!grounded) // jumping
         {
             animator.runtimeAnimatorController = jumpAnimation;
-            Debug.Log("In the air");
-
         }
         else if (moveDirection.magnitude != 0)
         { // player is moving

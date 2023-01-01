@@ -18,10 +18,14 @@ public class LiftPhysics : MonoBehaviour
     {
         if(playerIsColliding)
         {
-/*            player.transform.Translate(transform.up * Time.fixedDeltaTime);
-*/      
-        Rigidbody rb = player.GetComponent<Rigidbody>();
-            rb.AddForce(Vector3.up * 0.1f, ForceMode.Impulse);
+            var posY = player.transform.position.y;            player.transform.Translate(transform.up * Time.fixedDeltaTime * 0.4f);
+            // Move Player upwards
+            player.transform.position = Vector3.Lerp(player.transform.position, new Vector3(transform.position.x, posY, transform.position.z), 0.005f);
+            // Rotate Player
+            player.transform.Rotate(Vector3.up * Time.deltaTime * 300);
+
+            /*        Rigidbody rb = player.GetComponent<Rigidbody>();
+                        rb.AddForce(Vector3.up * 0.1f, ForceMode.Impulse);*/
         }
     }
 
@@ -30,6 +34,7 @@ public class LiftPhysics : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             playerIsColliding = true;
+            other.gameObject.GetComponent<Rigidbody>().useGravity = false;
         }
     }
 
@@ -38,6 +43,7 @@ public class LiftPhysics : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             playerIsColliding = false;
+            other.gameObject.GetComponent<Rigidbody>().useGravity = true;
         }
     }
 }
