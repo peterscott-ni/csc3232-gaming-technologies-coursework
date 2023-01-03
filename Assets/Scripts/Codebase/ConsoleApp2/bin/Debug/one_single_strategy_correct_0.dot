@@ -1,0 +1,38 @@
+digraph finite_state_machine {
+    rankdir=LR;
+    size="8,5"
+fake0 [style=invisible]
+node [root=true, label="{Door_Finish}", shape=circle, fontsize=10] q0
+node [label="{Door_CE}", shape=circle, fontsize=10] q1
+node [label="{Key_Finish}", shape=circle, fontsize=10] q2
+node [label="{Key_C}", shape=circle, fontsize=10] q3
+node [label="{Key_E}", shape=circle, fontsize=10] q4
+node [label="{Door_T}", shape=circle, fontsize=10] q5
+node [label="{Door_A}", shape=circle, fontsize=10] q6
+node [label="{Key_T}", shape=circle, fontsize=10] q7
+node [label="{Key_A}", shape=doublecircle, fontsize=10] q8
+node [label="{Door_D2}", shape=circle, fontsize=10] q9
+node [label="{Key_D}", shape=circle, fontsize=10] q10
+node [label="{Door_B}", shape=circle, fontsize=10] q11
+node [label="{Door_D1}", shape=circle, fontsize=10] q12
+node [label="{Key_B}", shape=circle, fontsize=10] q13
+fake0 -> q0 [style=bold]
+q0 -> q1 [style=bold, label="Door_CE and Key_Finish => Door_Finish"]
+q0 -> q2 [style=bold, label="Door_CE and Key_Finish => Door_Finish"]
+q1 -> q3 [style=bold, label="Key_C and Key_E => Door_CE"]
+q1 -> q4 [style=bold, label="Key_C and Key_E => Door_CE"]
+q3 -> q5 [style=bold, label="Door_T => Key_C"]
+q5 -> q6 [style=bold, label="Door_A and Key_T => Door_T"]
+q5 -> q7 [style=bold, label="Door_A and Key_T => Door_T"]
+q6 -> q8 [style=bold, label="Key_A => Door_A"]
+q7 -> q9 [style=bold, label="Door_D2 => Key_T"]
+q9 -> q6 [style=bold, label="Door_A and Key_D => Door_D2"]
+q9 -> q10 [style=bold, label="Door_A and Key_D => Door_D2"]
+q10 -> q6 [style=bold, label="Door_A => Key_D"]
+q4 -> q6 [style=bold, label="Door_A => Key_E"]
+q2 -> q11 [style=bold, label="Door_B => Key_Finish"]
+q11 -> q12 [style=bold, label="Door_D1 and Key_B => Door_B"]
+q11 -> q13 [style=bold, label="Door_D1 and Key_B => Door_B"]
+q12 -> q10 [style=bold, label="Key_D => Door_D1"]
+q13 -> q12 [style=bold, label="Door_D1 => Key_B"]
+}

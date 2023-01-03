@@ -1,0 +1,184 @@
+digraph finite_state_machine {
+    rankdir=LR;
+    size="8,5"
+fake0 [style=invisible]
+node [root=true, label="{Key_A}", shape=circle, fontsize=10] q0
+node [label="{Key_A, Door_A}", shape=circle, fontsize=10] q1
+node [label="{Key_A, Door_A, Key_E}", shape=circle, fontsize=10] q2
+node [label="{Key_A, Door_A, Key_E, Key_D}", shape=circle, fontsize=10] q3
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2}", shape=circle, fontsize=10] q4
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1}", shape=circle, fontsize=10] q5
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_T}", shape=circle, fontsize=10] q6
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_T, Door_T}", shape=circle, fontsize=10] q7
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_C}", shape=circle, fontsize=10] q8
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_C, Key_B}", shape=circle, fontsize=10] q9
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_C, Key_B, Door_B}", shape=circle, fontsize=10] q10
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_C, Key_B, Door_B, Key_Finish}", shape=circle, fontsize=10] q11
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_C, Key_B, Door_B, Key_Finish, Door_CE}", shape=circle, fontsize=10] q12
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_C, Key_B, Door_B, Key_Finish, Door_CE, Door_Finish}", shape=doublecircle, fontsize=10] q13
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_C, Key_B, Door_B, Door_CE}", shape=circle, fontsize=10] q14
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_C, Key_B, Door_CE}", shape=circle, fontsize=10] q15
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_C, Door_CE}", shape=circle, fontsize=10] q16
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_B}", shape=circle, fontsize=10] q17
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_B, Door_B}", shape=circle, fontsize=10] q18
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_B, Door_B, Key_Finish}", shape=circle, fontsize=10] q19
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_T, Key_B}", shape=circle, fontsize=10] q20
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_T, Key_B, Door_B}", shape=circle, fontsize=10] q21
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_T, Key_B, Door_B, Key_Finish}", shape=circle, fontsize=10] q22
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_B}", shape=circle, fontsize=10] q23
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_B, Door_B}", shape=circle, fontsize=10] q24
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Door_D1, Key_B, Door_B, Key_Finish}", shape=circle, fontsize=10] q25
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Key_T}", shape=circle, fontsize=10] q26
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Key_T, Door_T}", shape=circle, fontsize=10] q27
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Key_T, Door_T, Key_C}", shape=circle, fontsize=10] q28
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D2, Key_T, Door_T, Key_C, Door_CE}", shape=circle, fontsize=10] q29
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D1}", shape=circle, fontsize=10] q30
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D1, Key_B}", shape=circle, fontsize=10] q31
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D1, Key_B, Door_B}", shape=circle, fontsize=10] q32
+node [label="{Key_A, Door_A, Key_E, Key_D, Door_D1, Key_B, Door_B, Key_Finish}", shape=circle, fontsize=10] q33
+node [label="{Key_A, Door_A, Key_D}", shape=circle, fontsize=10] q34
+node [label="{Key_A, Door_A, Key_D, Door_D2}", shape=circle, fontsize=10] q35
+node [label="{Key_A, Door_A, Key_D, Door_D2, Door_D1}", shape=circle, fontsize=10] q36
+node [label="{Key_A, Door_A, Key_D, Door_D2, Door_D1, Key_T}", shape=circle, fontsize=10] q37
+node [label="{Key_A, Door_A, Key_D, Door_D2, Door_D1, Key_T, Door_T}", shape=circle, fontsize=10] q38
+node [label="{Key_A, Door_A, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_C}", shape=circle, fontsize=10] q39
+node [label="{Key_A, Door_A, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_C, Key_B}", shape=circle, fontsize=10] q40
+node [label="{Key_A, Door_A, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_C, Key_B, Door_B}", shape=circle, fontsize=10] q41
+node [label="{Key_A, Door_A, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_C, Key_B, Door_B, Key_Finish}", shape=circle, fontsize=10] q42
+node [label="{Key_A, Door_A, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_B}", shape=circle, fontsize=10] q43
+node [label="{Key_A, Door_A, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_B, Door_B}", shape=circle, fontsize=10] q44
+node [label="{Key_A, Door_A, Key_D, Door_D2, Door_D1, Key_T, Door_T, Key_B, Door_B, Key_Finish}", shape=circle, fontsize=10] q45
+node [label="{Key_A, Door_A, Key_D, Door_D2, Door_D1, Key_T, Key_B}", shape=circle, fontsize=10] q46
+node [label="{Key_A, Door_A, Key_D, Door_D2, Door_D1, Key_T, Key_B, Door_B}", shape=circle, fontsize=10] q47
+node [label="{Key_A, Door_A, Key_D, Door_D2, Door_D1, Key_T, Key_B, Door_B, Key_Finish}", shape=circle, fontsize=10] q48
+node [label="{Key_A, Door_A, Key_D, Door_D2, Door_D1, Key_B}", shape=circle, fontsize=10] q49
+node [label="{Key_A, Door_A, Key_D, Door_D2, Door_D1, Key_B, Door_B}", shape=circle, fontsize=10] q50
+node [label="{Key_A, Door_A, Key_D, Door_D2, Door_D1, Key_B, Door_B, Key_Finish}", shape=circle, fontsize=10] q51
+node [label="{Key_A, Door_A, Key_D, Door_D2, Key_T}", shape=circle, fontsize=10] q52
+node [label="{Key_A, Door_A, Key_D, Door_D2, Key_T, Door_T}", shape=circle, fontsize=10] q53
+node [label="{Key_A, Door_A, Key_D, Door_D2, Key_T, Door_T, Key_C}", shape=circle, fontsize=10] q54
+node [label="{Key_A, Door_A, Key_D, Door_D1}", shape=circle, fontsize=10] q55
+node [label="{Key_A, Door_A, Key_D, Door_D1, Key_B}", shape=circle, fontsize=10] q56
+node [label="{Key_A, Door_A, Key_D, Door_D1, Key_B, Door_B}", shape=circle, fontsize=10] q57
+node [label="{Key_A, Door_A, Key_D, Door_D1, Key_B, Door_B, Key_Finish}", shape=circle, fontsize=10] q58
+fake0 -> q0 [style=bold]
+q12 -> q13 [style=bold, label="Door_CE and Key_Finish => Door_Finish"]
+q11 -> q12 [style=bold, label="Key_C and Key_E => Door_CE"]
+q10 -> q11 [style=bold, label="Door_B => Key_Finish"]
+q14 -> q12 [style=bold, label="Door_B => Key_Finish"]
+q10 -> q14 [style=bold, label="Key_C and Key_E => Door_CE"]
+q9 -> q10 [style=bold, label="Door_D1 and Key_B => Door_B"]
+q15 -> q14 [style=bold, label="Door_D1 and Key_B => Door_B"]
+q9 -> q15 [style=bold, label="Key_C and Key_E => Door_CE"]
+q8 -> q9 [style=bold, label="Door_D1 => Key_B"]
+q16 -> q15 [style=bold, label="Door_D1 => Key_B"]
+q8 -> q16 [style=bold, label="Key_C and Key_E => Door_CE"]
+q7 -> q8 [style=bold, label="Door_T => Key_C"]
+q17 -> q9 [style=bold, label="Door_T => Key_C"]
+q18 -> q10 [style=bold, label="Door_T => Key_C"]
+q19 -> q11 [style=bold, label="Door_T => Key_C"]
+q18 -> q19 [style=bold, label="Door_B => Key_Finish"]
+q17 -> q18 [style=bold, label="Door_D1 and Key_B => Door_B"]
+q7 -> q17 [style=bold, label="Door_D1 => Key_B"]
+q6 -> q7 [style=bold, label="Door_A and Key_T => Door_T"]
+q20 -> q17 [style=bold, label="Door_A and Key_T => Door_T"]
+q21 -> q18 [style=bold, label="Door_A and Key_T => Door_T"]
+q22 -> q19 [style=bold, label="Door_A and Key_T => Door_T"]
+q21 -> q22 [style=bold, label="Door_B => Key_Finish"]
+q20 -> q21 [style=bold, label="Door_D1 and Key_B => Door_B"]
+q6 -> q20 [style=bold, label="Door_D1 => Key_B"]
+q5 -> q6 [style=bold, label="Door_D2 => Key_T"]
+q23 -> q20 [style=bold, label="Door_D2 => Key_T"]
+q24 -> q21 [style=bold, label="Door_D2 => Key_T"]
+q25 -> q22 [style=bold, label="Door_D2 => Key_T"]
+q24 -> q25 [style=bold, label="Door_B => Key_Finish"]
+q23 -> q24 [style=bold, label="Door_D1 and Key_B => Door_B"]
+q5 -> q23 [style=bold, label="Door_D1 => Key_B"]
+q4 -> q5 [style=bold, label="Key_D => Door_D1"]
+q26 -> q6 [style=bold, label="Key_D => Door_D1"]
+q27 -> q7 [style=bold, label="Key_D => Door_D1"]
+q28 -> q8 [style=bold, label="Key_D => Door_D1"]
+q29 -> q16 [style=bold, label="Key_D => Door_D1"]
+q28 -> q29 [style=bold, label="Key_C and Key_E => Door_CE"]
+q27 -> q28 [style=bold, label="Door_T => Key_C"]
+q26 -> q27 [style=bold, label="Door_A and Key_T => Door_T"]
+q4 -> q26 [style=bold, label="Door_D2 => Key_T"]
+q3 -> q4 [style=bold, label="Door_A and Key_D => Door_D2"]
+q30 -> q5 [style=bold, label="Door_A and Key_D => Door_D2"]
+q31 -> q23 [style=bold, label="Door_A and Key_D => Door_D2"]
+q32 -> q24 [style=bold, label="Door_A and Key_D => Door_D2"]
+q33 -> q25 [style=bold, label="Door_A and Key_D => Door_D2"]
+q32 -> q33 [style=bold, label="Door_B => Key_Finish"]
+q31 -> q32 [style=bold, label="Door_D1 and Key_B => Door_B"]
+q30 -> q31 [style=bold, label="Door_D1 => Key_B"]
+q3 -> q30 [style=bold, label="Key_D => Door_D1"]
+q2 -> q3 [style=bold, label="Door_A => Key_D"]
+q1 -> q2 [style=bold, label="Door_A => Key_E"]
+q34 -> q3 [style=bold, label="Door_A => Key_E"]
+q35 -> q4 [style=bold, label="Door_A => Key_E"]
+q36 -> q5 [style=bold, label="Door_A => Key_E"]
+q37 -> q6 [style=bold, label="Door_A => Key_E"]
+q38 -> q7 [style=bold, label="Door_A => Key_E"]
+q39 -> q8 [style=bold, label="Door_A => Key_E"]
+q40 -> q9 [style=bold, label="Door_A => Key_E"]
+q41 -> q10 [style=bold, label="Door_A => Key_E"]
+q42 -> q11 [style=bold, label="Door_A => Key_E"]
+q41 -> q42 [style=bold, label="Door_B => Key_Finish"]
+q40 -> q41 [style=bold, label="Door_D1 and Key_B => Door_B"]
+q39 -> q40 [style=bold, label="Door_D1 => Key_B"]
+q38 -> q39 [style=bold, label="Door_T => Key_C"]
+q43 -> q17 [style=bold, label="Door_A => Key_E"]
+q43 -> q40 [style=bold, label="Door_T => Key_C"]
+q44 -> q18 [style=bold, label="Door_A => Key_E"]
+q44 -> q41 [style=bold, label="Door_T => Key_C"]
+q45 -> q19 [style=bold, label="Door_A => Key_E"]
+q45 -> q42 [style=bold, label="Door_T => Key_C"]
+q44 -> q45 [style=bold, label="Door_B => Key_Finish"]
+q43 -> q44 [style=bold, label="Door_D1 and Key_B => Door_B"]
+q38 -> q43 [style=bold, label="Door_D1 => Key_B"]
+q37 -> q38 [style=bold, label="Door_A and Key_T => Door_T"]
+q46 -> q20 [style=bold, label="Door_A => Key_E"]
+q46 -> q43 [style=bold, label="Door_A and Key_T => Door_T"]
+q47 -> q21 [style=bold, label="Door_A => Key_E"]
+q47 -> q44 [style=bold, label="Door_A and Key_T => Door_T"]
+q48 -> q22 [style=bold, label="Door_A => Key_E"]
+q48 -> q45 [style=bold, label="Door_A and Key_T => Door_T"]
+q47 -> q48 [style=bold, label="Door_B => Key_Finish"]
+q46 -> q47 [style=bold, label="Door_D1 and Key_B => Door_B"]
+q37 -> q46 [style=bold, label="Door_D1 => Key_B"]
+q36 -> q37 [style=bold, label="Door_D2 => Key_T"]
+q49 -> q23 [style=bold, label="Door_A => Key_E"]
+q49 -> q46 [style=bold, label="Door_D2 => Key_T"]
+q50 -> q24 [style=bold, label="Door_A => Key_E"]
+q50 -> q47 [style=bold, label="Door_D2 => Key_T"]
+q51 -> q25 [style=bold, label="Door_A => Key_E"]
+q51 -> q48 [style=bold, label="Door_D2 => Key_T"]
+q50 -> q51 [style=bold, label="Door_B => Key_Finish"]
+q49 -> q50 [style=bold, label="Door_D1 and Key_B => Door_B"]
+q36 -> q49 [style=bold, label="Door_D1 => Key_B"]
+q35 -> q36 [style=bold, label="Key_D => Door_D1"]
+q52 -> q26 [style=bold, label="Door_A => Key_E"]
+q52 -> q37 [style=bold, label="Key_D => Door_D1"]
+q53 -> q27 [style=bold, label="Door_A => Key_E"]
+q53 -> q38 [style=bold, label="Key_D => Door_D1"]
+q54 -> q28 [style=bold, label="Door_A => Key_E"]
+q54 -> q39 [style=bold, label="Key_D => Door_D1"]
+q53 -> q54 [style=bold, label="Door_T => Key_C"]
+q52 -> q53 [style=bold, label="Door_A and Key_T => Door_T"]
+q35 -> q52 [style=bold, label="Door_D2 => Key_T"]
+q34 -> q35 [style=bold, label="Door_A and Key_D => Door_D2"]
+q55 -> q30 [style=bold, label="Door_A => Key_E"]
+q55 -> q36 [style=bold, label="Door_A and Key_D => Door_D2"]
+q56 -> q31 [style=bold, label="Door_A => Key_E"]
+q56 -> q49 [style=bold, label="Door_A and Key_D => Door_D2"]
+q57 -> q32 [style=bold, label="Door_A => Key_E"]
+q57 -> q50 [style=bold, label="Door_A and Key_D => Door_D2"]
+q58 -> q33 [style=bold, label="Door_A => Key_E"]
+q58 -> q51 [style=bold, label="Door_A and Key_D => Door_D2"]
+q57 -> q58 [style=bold, label="Door_B => Key_Finish"]
+q56 -> q57 [style=bold, label="Door_D1 and Key_B => Door_B"]
+q55 -> q56 [style=bold, label="Door_D1 => Key_B"]
+q34 -> q55 [style=bold, label="Key_D => Door_D1"]
+q1 -> q34 [style=bold, label="Door_A => Key_D"]
+q0 -> q1 [style=bold, label="Key_A => Door_A"]
+}
