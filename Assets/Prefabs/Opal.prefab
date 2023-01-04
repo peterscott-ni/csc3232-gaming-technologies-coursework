@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1858640767041319658}
   - component: {fileID: 878759201595906317}
   m_Layer: 0
-  m_Name: Key
+  m_Name: Opal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14a1ace735b65de4597c240fd4dc4e31, type: 2}
+  - {fileID: 2100000, guid: ce39f52ca2509c54abdb73aca8271926, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,6 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fec91aec74dbdf4e842482ca1efe7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tmp: {fileID: 0}
+  timeLogic: {fileID: 0}
 --- !u!1 &6634248317700714250
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,9 +156,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.2783019, g: 0.7238333, b: 1, a: 1}
-  m_Intensity: 0.3
-  m_Range: 10
+  m_Color: {r: 0.9339623, g: 0.37751138, b: 0.110137045, a: 1}
+  m_Intensity: 0.5
+  m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

@@ -37,8 +37,9 @@ public class FireflyFlocking : MonoBehaviour
         if (pathfindingEnabled) // pathfinding has been enabled after colliding with wall
         {
             agent.enabled = true;
-/*            Debug.Log("Pathfinding is active");
-*/            if (distanceFromTarget<= 1.5f) // regrouped with target
+            /*            Debug.Log("Pathfinding is active");
+            */
+            if (distanceFromTarget <= 1.5f) // regrouped with target
             {
                 agent.enabled = false;
                 pathfindingEnabled = false;
@@ -62,7 +63,7 @@ public class FireflyFlocking : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if(collision.collider.tag == "Wall")
+        if (collision.collider.tag == "Wall")
         {
             ActivatePathfinding();
         }
@@ -90,35 +91,4 @@ public class FireflyFlocking : MonoBehaviour
             rb.velocity = rb.velocity.normalized * maxSpeed;
         }
     }
-
-/*    private void SeparateFireflies()
-    {
-        Vector3 totalVector = Vector3.zero;
-        foreach(GameObject firefly in fireflyArray)
-        {
-            if(firefly != gameObject) // avoids performing calculation for self
-            { 
-                float currentNeighbourDistanceSqr = Vector3.SqrMagnitude(firefly.transform.position - transform.position);
-                if(currentNeighbourDistanceSqr <= (0.1f * 0.1f))
-                {
-                    Vector3 direction = firefly.transform.position - transform.position;
-                    rb.AddForce(-direction.normalized * 0.4f, ForceMode.Force);
-                }
-                *//*float distance = Vector3.Distance(firefly.transform.position, transform.position);
-                 if(distance <= 0.1f)
-                 {
-                     Vector3 direction = transform.position - firefly.transform.position;
-                     transform.Translate(direction * Time.deltaTime);
-                 }   */
-                /*                totalVector += (firefly.transform.position - transform.position);
-*//*
-            }
-
-        }
-        *//*Vector3 averageVector = totalVector / (fireflyArray.Length - 1);
-        if(Vector3.Distance(averageVector, transform.position) <= 0.2f)
-        {
-            rb.AddForce(-averageVector, ForceMode.Force);
-        }*//*
-    }*/
 }

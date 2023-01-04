@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class LiftColliderScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject[] fireflies;
 
     // Update is called once per frame
     void Update()
@@ -17,6 +13,14 @@ public class LiftColliderScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if(gameObject.name == "LiftColliderFireflies")
+        {
+            foreach (GameObject firefly in fireflies)
+            {
+                firefly.SetActive(false);
+            }
+            return;
+        }
         Debug.Log("Collided");
 
         if (other.gameObject.tag == "Player")
@@ -25,6 +29,7 @@ public class LiftColliderScript : MonoBehaviour
             rb.velocity = Vector3.zero;
             rb.AddForce(new Vector3(-4, 5, 0), ForceMode.Impulse);
             Debug.Log("YEET");
+            GameObject.Find("Opals").GetComponent<OpalCounter>().DisplayOpalCounter();
 
         }
     }
